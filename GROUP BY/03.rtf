@@ -1,0 +1,5 @@
+SELECT `exams`.date, AVG(`exam_student`.vote) as media_voto
+FROM `exam_student` 
+INNER JOIN `exams`
+ON `exams`.id = `exam_student`.exam_id
+GROUP BY `exams`.date;

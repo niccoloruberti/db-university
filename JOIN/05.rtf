@@ -1,0 +1,6 @@
+SELECT `courses`.name as Course, `courses`.period, `courses`.year, `courses`.cfu, `degrees`.name as Degree, CONCAT(`teachers`.surname, ' ',`teachers`.name)as teacher
+FROM `courses`
+JOIN `degrees`
+ON `degrees`.id = `courses`.`degree_id`
+JOIN `teachers`
+ON `teachers`.id = `courses`.`id`;

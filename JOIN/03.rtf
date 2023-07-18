@@ -1,5 +1,4 @@
-SELECT * 
-FROM `students`
-INNER JOIN `degrees`
-ON `degrees`.id = `students`.`degree_id`
-WHERE `degrees`.name LIKE 'Corso di Laurea in Economia';
+SELECT DISTINCT * 
+FROM `courses` 
+INNER JOIN `course_teacher`
+ON `course_teacher`.`teacher_id` = 44;
